@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education Portal</title>
+    <link rel="stylesheet" href="sytle.css">
+</head>
+<body>
+    <header class="header">
+        <h1>WELCOME TO EDUCATION</h1>
+        <nav class="nav">
+            <a href="#">Home</a>
+            <a href="#">Cources</a>
+            <a href="#">Events</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+    <section class="services">
+        <div class="event-left">
+            <h2>Upcoming Events</h2>
+            <ul>
+                <li>School Reopning - 12th June</li>
+                <li>Guest Lecture - 18th June</li>
+                <li>Science Fair - 12th August</li>
+            </ul>
+        </div>
+        <div class="event-right">
+            <div class="event-box">
+                <img src="lecture.jpeg" height="200" width="200">
+            <p>New Lecture Meeting</p>
+            </div>
+            <div class="event-box"><img src="online teaching.jpg" height="200" width="200">
+            <p>Online Teaching Techniqes</p>
+        </div>
+            <div class="event-box"><img src="conf.jpeg" height="200" width="200">
+            <p>Higher Education Conference</p>
+        </div>
+            <div class="event-box"><img src="traning.jpeg" height="200" width="200">
+            <p>Student Training Meetup</p>
+        </div>
+        </div>
+    </section>
+    <section class="bachelor">
+        <div class="left">
+            <h2>Apply for Bachelor Degree</h2>
+            <p>Admission open now. Apply today!</p>
+            <button>Apply now</button>
+        </div>
+        <div class="right"></div>
+        <p>Information about available programs,scholorships,and eligibility.</p>
+    </section>
+    <section class="courses">
+        <h2>Our Popular Courses</h2>
+        <div class="course-boxes">
+            <div class="course">Web Design</div>
+            <div class="course">JavaScript</div>
+            <div class="course">Python</div>
+            <div class="course">Graphic Design</div>
+        </div>
+    </section>
+    <section class="facts">
+        <div class="left-facts">
+            <h3>A few Facts About university</h3>
+            <div class="fact-grid">
+                <div class="fact">1000+ Students</div>
+                <div class="fact">50+ Teachers</div>
+                <div class="fact">10+ Courses</div>
+            </div>
+        </div>
+        <div class="right-img">
+            <img src="student.jpeg"alt="Student">
+        </div>
+     </section>
+     <section class="contact">
+        <form id="contactForm">
+            <p>LET'S GET IN TOUCH</p>
+            <input type="text" id="name" name="name" placeholder="Your Name">
+            <input type="email" id="email" name="name" placeholder="Your Email">
+            <textarea name="message" placeholder="Your Message"></textarea>
+            <button type="submit">Send Message Now</button>
+    </form>
+   </section>
+   <footer class="footer">
+    <p>&copy; 2025 Education Portal</p>
+   </footer>
+   <script>
+    document.getElementById("contactForm").addEventListener("submit",function(e){
+        const name = document.getElementById("name").value;
+        const regex = /^[A-Za-z]{3,6}$/;
+        if (!regex.test(name)){
+            alert("Name must be 3-6 alphabets only,no numbers.");
+            e.preventDefault();
+        }
+    });
+   </script>
+    
+</body>
+</html>
