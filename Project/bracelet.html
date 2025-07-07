@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bracelets</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<style>
+    body{
+        background-color: azure;
+        display: flex;
+        
+    }
+</style>
+<body>
+    <h1>Here you can choose your favorite one.</h1>
+    <div class="card" style="width: 18rem;">
+        <img src="brac1.jpg"  height="400px" width="400px" class="card-img-top" alt="RoseGold Ring">
+        <div class="card-body">
+        <h5 class="card-title">Elegent RoseGold Bracelet</h5>
+        <p class="card-text">Price: Rs.65,000</p>
+        <button type="button" class="btn btn-success" onclick="buyNow('Elegent RoseGold Bracelet', 65000)">Buy Now</button>
+    </div>
+</div>
+    <div class="card" style="width: 18rem;">
+        <img src="brac2.jpeg"  height="400px" width="400px" class="card-img-top" alt="Gold Bracelet">
+        <div class="card-body">
+        <h5 class="card-title">Floral Gold Bracelet</h5>
+        <p class="card-text">Price: Rs.50,000</p>
+        <button type="button" class="btn btn-success" onclick="buyNow('Floral Gold Bracelet', 50000)">Buy Now</button>
+    </div>
+</div>
+    <div class="card" style="width: 18rem;">
+        <img src="brac3.jpeg"  height="400px" width="400px" class="card-img-top" alt="Gold Bracelet">
+        <div class="card-body">
+        <h5 class="card-title">Decent Gold Bracelet</h5>
+        <p class="card-text">Price: Rs.70,000</p>
+        <button type="button" class="btn btn-success" onclick="buyNow('Decent Gold Bracelet', 70000)">Buy Now</button>
+    </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        <img src="brac4.webp"  height="400px" width="400px" class="card-img-top" alt="Silver Bracelet">
+        <div class="card-body">
+        <h5 class="card-title">Elegent Silver Bracelet</h5>
+        <p class="card-text">Price: Rs.30,000</p>
+        <button type="button" class="btn btn-success" onclick="buyNow('Elegent Silver Bracelet', 30000)">Buy Now</button>
+    </div>
+    </div>
+    <p>Total: ₹<span id="cartTotal">0</span></p>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+   <script>
+    let cart = [];
+    let total = 0;
+  
+    function buyNow(name, price) {
+      cart.push({ name: name, price: price });
+      total += price;
+  
+      alert(`${name} added to cart. Total: ₹${total.toLocaleString()}`);
+    }
+  </script>
+
+    
+</body>
+</html>
